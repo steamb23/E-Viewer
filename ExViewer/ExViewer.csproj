@@ -25,7 +25,8 @@
     <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
     <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
     <PackageCertificateKeyFile>ExViewer_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>AC82A857467374ACB64C3F8A542446485164DD50</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>E51B746583221DDD0DA78BEE33563D5B31925D73</PackageCertificateThumbprint>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
@@ -193,6 +194,12 @@
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
     <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SteamB23-ExViewer.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
@@ -409,10 +416,11 @@
     <PRIResource Include="Strings\en\Resources.resJson" />
     <PRIResource Include="Strings\en\Settings.resJson" />
     <PRIResource Include="Strings\en\Exceptions.resJson" />
-    <None Include="ExViewer_TemporaryKey.pfx" />
     <PRIResource Include="Strings\ko\Exceptions.resJson" />
     <PRIResource Include="Strings\ko\Resources.resJson" />
     <PRIResource Include="Strings\ko\Settings.resJson" />
+    <None Include="ExViewer_TemporaryKey.pfx" />
+    <None Include="SteamB23-ExViewer.snk" />
     <None Include="Strings\Strings.resgenconfig" />
     <Content Include="Assets\Theme\Dark\ImageLoading.png" />
     <Content Include="Assets\Theme\Dark\UserBackground.png" />
